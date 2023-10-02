@@ -1,6 +1,7 @@
 import React from "react";
 import logo1 from "../../assets/icons/iCON 7 1.svg";
 import { useNavigate } from "react-router";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate()
@@ -12,12 +13,12 @@ const Header = () => {
       </div>
 
       <div className="gap-[35px] hidden sm:flex">
-        <p className="cursor-pointer">Features</p>
-        <p className="cursor-pointer">How it Works</p>
+        <NavLink className="cursor-pointer">Features</NavLink>
+        <NavLink className="cursor-pointer">How it Works</NavLink>
       </div>
 
       <div onClick={()=>navigate('/login')} className="text-[18px] cursor-pointer">
-        <p>Get Started</p>
+        <NavLink to="/home-page" >Get Started</NavLink>
       </div>
     </div>
   );
